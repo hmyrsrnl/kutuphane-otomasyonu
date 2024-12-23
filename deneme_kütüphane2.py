@@ -25,10 +25,10 @@ class HashTable:
         #hash fonksiyonuna göre indexler belirleniyor
         if self.table[index] is None: #eğer o değer boşsa
             self.table[index] = Node(anahtar, değer, ödünç) #yeni bir düğüm oluşturur
-            self.size += 1
+            self.size += 1 #tablodaki öğe sayisini 1 arttirir
         else: 
             current = self.table[index] #dizideki ilk düğümü bul
-            #current ifadesi linked list içindeki node'lari dolaşirkenşuanda bulunan dügümü ifade eder
+            #current ifadesi linked list içindeki node'lari dolaşirken şuanda bulunan dügümü ifade eder
             while current: 
                 if current.anahtar == anahtar: #key mevcutsa
                     current.değer = değer #güncelleme yap
