@@ -38,6 +38,7 @@ class HashTable:
             new_node = Node(anahtar, değer) #key yoksa yeni düğüm oluştur
             new_node.next = self.table[index] #yeni düğümü mevcut listeye bağla
             self.table[index] = new_node #yeni düğümü başa yerleştir
+            #[index] -> Node("B", 2) -> Node("A", 1) -> None
             self.size += 1
   
     def search(self, anahtar): 
