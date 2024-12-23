@@ -70,9 +70,6 @@ class HashTable:
             current = current.next #currente bir sonraki düğümü atar, bir sonraki düğüme geçer
         raise KeyError(anahtar) 
   
-    def __len__(self): #boyutu veya uzunlugu döndüren fonksiyon
-        return self.size #size değerini döndürür
-  
     def __contains__(self, anahtar): #'in' ile bir öğe kontrolü yapılırken çalışır
         try: 
             self.search(anahtar) #search fonksiyonunu çağirir
