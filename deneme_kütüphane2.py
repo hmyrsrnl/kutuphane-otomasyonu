@@ -20,7 +20,7 @@ class HashTable:
         return hash(anahtar) % self.kapasite
   
     def insert(self, anahtar, değer, ödünç=False):
-    #hash table içine key-value değeri eklemek için
+    #hash table içine key-value değeri eklemek veya güncellemek için
         index = self._hash(anahtar) 
         #hash fonksiyonuna göre indexler belirleniyor
         if self.table[index] is None: #eğer o değer boşsa
