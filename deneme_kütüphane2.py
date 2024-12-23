@@ -12,7 +12,8 @@ class HashTable:
     #hash table için baştaki özelliklerini tanimlar
         self.kapasite = kapasite 
         self.size = 0
-        self.table = [None] * kapasite 
+        self.table = [None] * kapasite #çakişma durumu için kapasite kadar liste oluşturuyoruz
+        #pythonda liste oluşturmak için [] kullanilir
   
     def _hash(self, anahtar): 
     #hash fonksiyonu için indexin nasil belirlenecegini tanimlar
