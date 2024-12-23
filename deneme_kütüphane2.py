@@ -57,7 +57,7 @@ class HashTable:
         current = self.table[index] 
         while current: 
             if current.anahtar == anahtar: #anahtar şuanki anahtara eşitse
-                if previous: 
+                if previous: #şuanki düğümden bir önceki düğüm mevcut mu ? node listenin başinda bulunuyor
                     previous.next = current.next
                     #şuanki düğümü silmek için yukardaki atama yapılır
                 else: 
@@ -71,7 +71,7 @@ class HashTable:
         raise KeyError(anahtar) 
   
     def __len__(self): #boyutu veya uzunlugu döndüren fonksiyon
-        return self.size #size değerine döndürür
+        return self.size #size değerini döndürür
   
     def __contains__(self, anahtar): #'in' ile bir öğe kontrolü yapılırken çalışır
         try: 
@@ -107,7 +107,7 @@ class HashTable:
             print("Bu kitap zaten mevcut.")
         else:
             self.insert(kitap_ad, kitap_yazar, ödünç=False)
-            print(f" {kitap_ad} kitap kütüphaneye eklendi.")
+            print(f" {kitap_ad} adli kitap kütüphaneye eklendi.")
 
     def kitap_arama(self, kitap_ad):
         try:
