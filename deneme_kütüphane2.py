@@ -57,12 +57,10 @@ class HashTable:
         current = self.table[index] 
         while current: 
             if current.anahtar == anahtar: #anahtar şuanki anahtara eşitse
-                if previous: #şuanki düğümden bir önceki düğüm mevcut mu ? node listenin başinda bulunuyor
-                    previous.next = current.next
-                    #şuanki düğümü silmek için yukardaki atama yapılır
+                if previous: #şuanki düğümden bir önceki düğüm mevcut mu ?
+                    previous.next = current.next #düğüm ilk eleman değise önceki düğüm silinen düğümden sonraaki düğüme bağlanir
                 else: 
-                    self.table[index] = current.next
-                    #silinen node listenin ortasinda veya sonundaysa eşitlemesiyle silinen düğüm atlanir
+                    self.table[index] = current.next #düğüm ilk eleman ise ilk düüğümü atlayarak sonraki düğüme geç
                 self.size -= 1
                 #düğüm silininse tablodaki öge sayisi azalir
                 return
